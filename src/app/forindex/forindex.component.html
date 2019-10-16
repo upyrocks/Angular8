@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="form-group">
+        <h3>Add New Products</h3>
+        <div class="form-group">
+            <label>Name</label>
+            <div>
+                <input type="text" [(ngModel)] = "Name" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <label>Price</label>
+            <div>
+                <input type="text" [(ngModel)] = "Price" class="form-control">
+            </div>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" (click) = "AddProduct()">Add Product</button>
+        </div>
+    </div><br>
+<h3>Product List</h3>
+<table class="table table-hover">
+    <thead>
+        <th>Product ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Action</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products, let i = index">
+            <td>{{product.ProductID}}</td>
+            <td>{{product.Name}}</td>
+            <td>{{product.Price | currency:"₹"}}</td>
+            <td><button class="btn btn-danger" (click) = "DeleteProduct(i)">Delete</button></td>
+        </tr>
+    </tbody>
+</table>
+</div>

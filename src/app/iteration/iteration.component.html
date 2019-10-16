@@ -1,0 +1,62 @@
+<div class="container">
+<h2>Products Data</h2>
+<button (click)="AddNewProducts()" class="btn btn-primary">AddNewProduct</button>
+<table class="table table-hover">
+    <thead class="bg-primary text-white">
+     <th>Name</th>
+     <th>Price</th>
+     <th>Index</th>
+     <th>First</th>
+     <th>Last</th>
+     <th>Odd</th>
+     <th>Even</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of data; let i=index; let first=first ; let last=last ; let odd=odd ; let even=even; trackBy:TrackChanges">
+            <td>{{product.Name}}</td>
+            <td>{{product.Price}}</td>
+            <td>{{i}}</td>
+            <td>{{first}}</td>
+            <td>{{last}}</td>
+            <td>{{odd}}</td>
+            <td>{{even}}</td>
+        </tr>
+    </tbody>
+</table>
+</div><br>
+<div class="container">
+    <h2>Products Catalogs</h2>
+    <div class="card-deck">
+        <div class="card" *ngFor = "let product of products">
+            <div class="card-header text-center">
+                <h3>{{product.Name}}</h3>
+            </div>
+            <div class="card-body text-center">
+                <img src="{{product.Image}}" style="width: 250px ; height:250px;" class="img-thumbnail">
+            </div>
+            <div class="card.footer">
+               Price : {{product.Price | currency}}
+            </div>
+        </div>
+    </div><br>
+
+    <div class="container">
+        <h2>Products Catalogs</h2>
+            <div class="card-deck">
+                <div class="card" *ngFor = "let item of items">
+                    <div class="card-header text-center">
+                        <h3>{{item.Name}}</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="{{item.Image}}" style="width: 200px ; height:200px;" class="img-thumbnail">
+                    </div>
+                    <div class="card.footer text-center">
+                       {{item.Likes}} (Likes)
+                       <button (click)="Likes(item)" class="btn btn-primary">Likes</button>
+                       <span>|</span>
+                       {{item.Dislikes}} (Dislikes)
+                       <button (click)="Dislikes(item)" class="btn btn-danger">Dislikes</button>
+                    </div>
+                </div>
+            </div>
+        
