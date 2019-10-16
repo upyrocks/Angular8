@@ -11,6 +11,7 @@ import { RegisterComponent } from './register/register.component';
 import { IterationComponent } from './iteration/iteration.component';
 import { ForindexComponent } from './forindex/forindex.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
+import { PropertybindingComponent } from './propertybinding/propertybinding.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +23,14 @@ import { ClassbindingComponent } from './classbinding/classbinding.component';
     RegisterComponent,
     IterationComponent,
     ForindexComponent,
-    ClassbindingComponent
+    ClassbindingComponent,
+    PropertybindingComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [ForindexComponent]
+  bootstrap: [PropertybindingComponent]
 })
 export class AppModule { }
