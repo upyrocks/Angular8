@@ -12,6 +12,12 @@ import { IterationComponent } from './iteration/iteration.component';
 import { ForindexComponent } from './forindex/forindex.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
 import { PropertybindingComponent } from './propertybinding/propertybinding.component';
+import { ChangedemoComponent } from './changedemo/changedemo.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { FilterComponent } from './filter/filter.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductdataService } from './productdata.service';
 
 @NgModule({
   declarations: [
@@ -24,13 +30,18 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
     IterationComponent,
     ForindexComponent,
     ClassbindingComponent,
-    PropertybindingComponent
+    PropertybindingComponent,
+    ChangedemoComponent,
+    ParentComponent,
+    ChildComponent,
+    FilterComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
   providers: [],
-  bootstrap: [PropertybindingComponent]
+  bootstrap: [ProductsComponent]
 })
 export class AppModule { }

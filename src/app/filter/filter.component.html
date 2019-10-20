@@ -1,0 +1,10 @@
+<div>
+    <fieldset>
+        <legend>Filter Product</legend>
+        <div class="form-group">
+            <input type="radio" [(ngModel)]="SelectedCategoryValue" value="All" name="choose" (change)="onCategoryChanged()"> All [{{All}}]
+            <input type="radio" [(ngModel)]="SelectedCategoryValue" value="Electronics" name="choose" (change)="onCategoryChanged()">Electronics [{{Electronics}}]
+            <input type="radio" [(ngModel)]="SelectedCategoryValue" value="Shoes" name="choose" (change)="onCategoryChanged()"> Shoes [{{Shoes}}]
+        </div>
+    </fieldset>
+</div>

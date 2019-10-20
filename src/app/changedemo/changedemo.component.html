@@ -1,0 +1,23 @@
+<div class="container">
+    <h2>Shopping Cart</h2>
+    <div class="form-group">
+        <label>Select Category</label>
+        <div>
+            <select class="form-control" [(ngModel)]="lstcategories" (change)="CategoryChanged()">
+                <option *ngFor="let category of categories">
+                    {{category}}
+                </option>
+            </select>
+        </div>
+    </div>
+    <div class="form-group">
+            <label>Select Product</label>
+            <div>
+                <select class="form-control" [(ngModel)]="lstproducts" (change)="ProductChanged()">
+                    <option *ngFor="let product of products">
+                        {{product}}
+                    </option>
+                </select>
+            </div>
+        </div>
+</div>
